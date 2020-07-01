@@ -32,7 +32,7 @@ import {
 import { TextProps } from '../text/text.component';
 
 type ButtonStyledProps = Overwrite<StyledComponentProps, {
-  appearance?: 'filled' | 'outline' | 'ghost' | string;
+  appearance?: 'filled' | 'outline' | 'ghost';
 }>;
 
 export interface ButtonProps extends TouchableWebProps, ButtonStyledProps {

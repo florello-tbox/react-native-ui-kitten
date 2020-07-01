@@ -31,7 +31,7 @@ import {
 import { TextProps } from '../text/text.component';
 
 type ListItemStyledProps = Overwrite<StyledComponentProps, {
-  appearance?: 'default' | string;
+  appearance?: 'default';
 }>;
 
 export interface ListItemProps extends TouchableWebProps, ListItemStyledProps {

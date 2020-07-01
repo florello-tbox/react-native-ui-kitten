@@ -16,12 +16,12 @@ import {
 } from '../../theme';
 
 type LayoutStyledProps = Overwrite<StyledComponentProps, {
-  appearance?: 'default' | string;
+  appearance?: 'default';
 }>;
 
 export interface LayoutProps extends ViewProps, LayoutStyledProps {
   children?: React.ReactNode;
-  level?: '1' | '2' | '3' | '4' | string;
+  level?: '1' | '2' | '3' | '4';
 }
 
 export type LayoutElement = React.ReactElement<LayoutProps>;

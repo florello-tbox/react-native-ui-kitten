@@ -29,7 +29,7 @@ import {
 import { Divider } from '../divider/divider.component';
 
 type CardStyledProps = Overwrite<StyledComponentProps, {
-  appearance?: 'filled' | 'outline' | string;
+  appearance?: 'filled' | 'outline';
 }>;
 
 export interface CardProps extends TouchableWebProps, CardStyledProps {

@@ -29,7 +29,7 @@ import {
 import { TextProps } from '../text/text.component';
 
 type BottomNavigationTabStyledProps = Overwrite<StyledComponentProps, {
-  appearance?: 'default' | string;
+  appearance?: 'default';
 }>;
 
 export interface BottomNavigationTabProps extends TouchableWebProps, BottomNavigationTabStyledProps {

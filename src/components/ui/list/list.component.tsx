@@ -16,7 +16,7 @@ import {
 } from '../../theme';
 
 type ListStyledProps = Overwrite<StyledComponentProps, {
-  appearance?: 'default' | string;
+  appearance?: 'default';
 }>;
 
 export type ListProps<ItemT = any> = FlatListProps<ItemT> & ListStyledProps;

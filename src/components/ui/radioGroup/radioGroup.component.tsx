@@ -24,7 +24,7 @@ import {
 } from '../radio/radio.component';
 
 type RadioGroupStyledProps = Overwrite<StyledComponentProps, {
-  appearance?: 'default' | string;
+  appearance?: 'default';
 }>;
 
 export interface RadioGroupProps extends ViewProps, RadioGroupStyledProps {

@@ -22,11 +22,11 @@ import {
 } from '../../theme';
 
 type AvatarStyledProps = Overwrite<StyledComponentProps, {
-  appearance?: 'default' | string;
+  appearance?: 'default';
 }>;
 
 export type AvatarProps<P = ImageProps> = AvatarStyledProps & P & {
-  shape?: 'round' | 'rounded' | 'square' | string;
+  shape?: 'round' | 'rounded' | 'square';
   size?: EvaSize;
   /**
    * We use `any` here to prevent ts complains for most of the libraries that use

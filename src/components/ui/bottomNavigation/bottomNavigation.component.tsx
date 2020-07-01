@@ -31,7 +31,7 @@ import {
 } from '../shared/tabIndicator.component';
 
 type BottomNavigationStyledProps = Overwrite<StyledComponentProps, {
-  appearance?: 'default' | 'noIndicator' | string;
+  appearance?: 'default' | 'noIndicator';
 }>;
 
 export interface BottomNavigationProps extends ViewProps, BottomNavigationStyledProps {

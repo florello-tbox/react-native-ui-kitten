@@ -3,9 +3,9 @@ import { ReactElement } from 'react';
 export type ChildrenProp<Element extends ReactElement = ReactElement> = Element | Element[];
 export type ChildrenWithProps<Props = {}> = ChildrenProp<ReactElement<Props>>;
 
-export type EvaStatus = 'basic' | 'primary' | 'success' | 'info' | 'warning' | 'danger' | 'control' | string;
-export type EvaSize = 'tiny' | 'small' | 'medium' | 'large' | 'giant' | string;
-export type EvaInputSize = 'small' | 'medium' | 'large' | string;
+export type EvaStatus = 'basic' | 'primary' | 'success' | 'info' | 'warning' | 'danger' | 'control';
+export type EvaSize = 'tiny' | 'small' | 'medium' | 'large' | 'giant';
+export type EvaInputSize = 'small' | 'medium' | 'large';
 
 export class IndexPath {
 

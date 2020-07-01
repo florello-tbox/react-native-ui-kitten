@@ -30,7 +30,7 @@ import {
 import { TextProps } from '../text/text.component';
 
 type RadioStyledProps = Overwrite<StyledComponentProps, {
-  appearance?: 'default' | string;
+  appearance?: 'default';
 }>;
 
 export interface RadioProps extends TouchableWebProps, RadioStyledProps {

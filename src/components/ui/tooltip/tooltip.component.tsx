@@ -33,12 +33,12 @@ import { PopoverIndicator } from '../popover/popoverIndicator.component';
 import { TextProps } from '../text/text.component';
 
 type TooltipStyledProps = Overwrite<StyledComponentProps, {
-  appearance?: 'default' | string;
+  appearance?: 'default';
 }>;
 
-type TooltipPopoverProps = Overwrite<PopoverProps, {
+type TooltipPopoverProps = Omit<Overwrite<PopoverProps, {
   children: RenderType<TextProps> | React.ReactText;
-}>;
+}>, 'appearance'>;
 
 export interface TooltipProps extends TooltipPopoverProps, TooltipStyledProps {
   accessoryLeft?: RenderType<Partial<ImageProps>>;

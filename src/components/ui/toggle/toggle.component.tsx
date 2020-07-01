@@ -38,7 +38,7 @@ import { TextProps } from '../text/text.component';
 import { CheckMark } from '../shared/checkmark.component';
 
 type ToggleStyledProps = Overwrite<StyledComponentProps, {
-  appearance?: 'default' | string;
+  appearance?: 'default';
 }>;
 
 export interface ToggleProps extends TouchableWebProps, ToggleStyledProps {

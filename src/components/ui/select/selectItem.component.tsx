@@ -36,7 +36,7 @@ import { TextProps } from '../text/text.component';
 import { SelectItemDescriptor } from './select.service';
 
 type SelectItemStyledProps = Overwrite<StyledComponentProps, {
-  appearance?: 'default' | 'grouped' | string;
+  appearance?: 'default' | 'grouped';
 }>;
 
 type TouchableSelectProps = Overwrite<TouchableWebProps, {

@@ -28,7 +28,7 @@ import {
 } from './animation';
 
 type SpinnerStyledProps = Overwrite<StyledComponentProps, {
-  appearance?: 'default' | string;
+  appearance?: 'default';
 }>;
 
 export interface SpinnerProps extends ViewProps, SpinnerStyledProps {

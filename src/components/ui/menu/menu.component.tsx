@@ -31,10 +31,10 @@ import {
 } from './menu.service';
 
 type MenuStyledProps = Overwrite<StyledComponentProps, {
-  appearance?: 'default' | 'noDivider' | string;
+  appearance?: 'default' | 'noDivider';
 }>;
 
-type MenuListProps = Omit<ListProps, 'data' | 'renderItem'>;
+type MenuListProps = Omit<ListProps, 'appearance' | 'data' | 'renderItem'>;
 
 export interface MenuProps extends MenuListProps, MenuStyledProps {
   children?: ChildrenWithProps<MenuItemProps>;

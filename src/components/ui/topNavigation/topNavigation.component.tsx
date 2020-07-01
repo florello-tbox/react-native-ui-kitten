@@ -24,7 +24,7 @@ import {
 import { TextProps } from '../text/text.component';
 
 type TopNavigationStyledProps = Overwrite<StyledComponentProps, {
-  appearance?: 'default' | 'control' | string;
+  appearance?: 'default' | 'control';
 }>;
 
 export interface TopNavigationProps extends ViewProps, TopNavigationStyledProps {

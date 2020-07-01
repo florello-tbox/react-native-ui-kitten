@@ -28,7 +28,7 @@ import {
 import { TabIndicator } from '../shared/tabIndicator.component';
 
 type TabBarStyledProps = Overwrite<StyledComponentProps, {
-  appearance?: 'default' | string;
+  appearance?: 'default';
 }>;
 
 export interface TabBarProps extends ViewProps, TabBarStyledProps {

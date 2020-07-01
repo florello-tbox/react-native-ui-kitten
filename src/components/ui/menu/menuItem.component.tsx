@@ -32,7 +32,7 @@ import { TextProps } from '../text/text.component';
 import { MenuItemDescriptor } from './menu.service';
 
 type MenuItemStyledProps = Overwrite<StyledComponentProps, {
-  appearance?: 'default' | 'grouped' | string;
+  appearance?: 'default' | 'grouped';
 }>;
 
 type TouchableMenuItemProps = Overwrite<TouchableWebProps, {

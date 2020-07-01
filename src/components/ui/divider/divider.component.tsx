@@ -16,7 +16,7 @@ import {
 } from '../../theme';
 
 type DividerStyledProps = Overwrite<StyledComponentProps, {
-  appearance?: 'default' | string;
+  appearance?: 'default';
 }>;
 
 export type DividerProps = ViewProps & DividerStyledProps;

@@ -27,7 +27,7 @@ import {
 } from '../../theme';
 
 type TopNavigationActionStyledProps = Overwrite<StyledComponentProps, {
-  appearance?: 'default' | 'control' | string;
+  appearance?: 'default' | 'control';
 }>;
 
 export interface TopNavigationActionProps extends TouchableWebProps, TopNavigationActionStyledProps {

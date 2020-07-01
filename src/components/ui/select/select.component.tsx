@@ -52,7 +52,7 @@ import {
 } from './select.service';
 
 type SelectStyledProps = Overwrite<StyledComponentProps, {
-  appearance?: 'default' | string;
+  appearance?: 'default';
 }>;
 
 export interface SelectProps extends TouchableWebProps, SelectStyledProps {

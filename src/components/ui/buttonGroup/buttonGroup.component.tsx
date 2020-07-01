@@ -28,7 +28,7 @@ import {
 } from '../button/button.component';
 
 type ButtonGroupStyledProps = Overwrite<StyledComponentProps, {
-  appearance?: 'filled' | 'outline' | string;
+  appearance?: 'filled' | 'outline';
 }>;
 
 export interface ButtonGroupProps extends ViewProps, ButtonGroupStyledProps {

@@ -39,7 +39,7 @@ import {
 } from '../shared/minus.component';
 
 type CheckBoxStyledProps = Overwrite<StyledComponentProps, {
-  appearance?: 'default' | string;
+  appearance?: 'default';
 }>;
 
 export interface CheckBoxProps extends TouchableWebProps, CheckBoxStyledProps {

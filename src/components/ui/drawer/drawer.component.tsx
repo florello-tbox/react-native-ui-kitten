@@ -22,7 +22,7 @@ import {
 } from '../menu/menu.component';
 
 type DrawerStyledProps = Overwrite<StyledComponentProps, {
-  appearance?: 'default' | 'noDivider' | string;
+  appearance?: 'default' | 'noDivider';
 }>;
 
 export interface DrawerProps extends MenuProps, DrawerStyledProps {
