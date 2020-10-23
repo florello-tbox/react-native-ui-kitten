@@ -45,6 +45,7 @@ export interface MenuItemProps extends TouchableMenuItemProps, MenuItemStyledPro
   accessoryRight?: RenderType<Partial<ImageProps>>;
   selected?: boolean;
   descriptor?: MenuItemDescriptor;
+  iconStyle?: ImageProps['style']
 }
 
 export type MenuItemElement = React.ReactElement<MenuItemProps>;
@@ -143,7 +144,7 @@ export class MenuItem extends React.Component<MenuItemProps> {
   };
 
   public render(): React.ReactNode {
-    const { eva, style, title, accessoryLeft, accessoryRight, children, ...touchableProps } = this.props;
+    const { eva, style, iconStyle, title, accessoryLeft, accessoryRight, children, ...touchableProps } = this.props;
     const evaStyle = this.getComponentStyle(eva.style);
 
     return (
@@ -159,7 +160,7 @@ export class MenuItem extends React.Component<MenuItemProps> {
         onPressOut={this.onPressOut}>
         <View style={[StyleSheet.absoluteFill, evaStyle.indicator]}/>
         <FalsyFC
-          style={evaStyle.icon}
+          style={[evaStyle.icon, iconStyle]}
           component={accessoryLeft}
         />
         <FalsyText
@@ -167,7 +168,7 @@ export class MenuItem extends React.Component<MenuItemProps> {
           component={title}
         />
         <FalsyFC
-          style={evaStyle.icon}
+          style={[evaStyle.icon, iconStyle]}
           component={accessoryRight}
         />
       </TouchableWeb>
