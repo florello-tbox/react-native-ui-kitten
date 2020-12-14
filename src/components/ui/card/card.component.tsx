@@ -10,6 +10,8 @@ import {
   StyleSheet,
   View,
   ViewProps,
+  NativeSyntheticEvent,
+  TargetedEvent
 } from 'react-native';
 import {
   EvaStatus,
@@ -80,6 +82,17 @@ export type CardElement = React.ReactElement<CardProps>;
 @styled('Card')
 export class Card extends React.Component<CardProps> {
 
+  private onMouseEnter = (event: NativeSyntheticEvent<TargetedEvent>): void => {
+    this.props.eva.dispatch([Interaction.HOVER]);
+    this.props.onMouseEnter && this.props.onMouseEnter(event);
+  };
+
+  private onMouseLeave = (event: NativeSyntheticEvent<TargetedEvent>): void => {
+    this.props.eva.dispatch([]);
+    this.props.onMouseLeave && this.props.onMouseLeave(event);
+  };
+
+
   private onPressIn = (event: GestureResponderEvent): void => {
     this.props.eva.dispatch([Interaction.ACTIVE]);
     this.props.onPressIn && this.props.onPressIn(event);
@@ -139,7 +152,9 @@ export class Card extends React.Component<CardProps> {
         {...touchableProps}
         style={[styles.container, evaStyle.container, style]}
         onPressIn={this.onPressIn}
-        onPressOut={this.onPressOut}>
+        onPressOut={this.onPressOut}
+        onMouseEnter={this.onMouseEnter}
+        onMouseLeave={this.onMouseLeave}>
         <FalsyFC
           style={evaStyle.accent}
           fallback={this.renderStatusAccent(evaStyle.accent)}
