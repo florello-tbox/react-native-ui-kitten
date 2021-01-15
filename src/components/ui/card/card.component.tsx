@@ -119,6 +119,7 @@ export class Card extends React.Component<CardProps> {
     return {
       container: containerParameters,
       body: {
+        flex: 1,
         paddingVertical: bodyPaddingVertical,
         paddingHorizontal: bodyPaddingHorizontal,
       },
