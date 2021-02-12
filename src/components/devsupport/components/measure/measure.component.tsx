@@ -60,18 +60,30 @@ export const MeasureElement = (props: MeasureElementProps): MeasuringElement => 
     return bindToWindow(boundFrame, window);
   };
 
-  const measureSelf = React.useCallback((): void => {
+  const measureSelf = React.useCallback((event): void => {
     const onUIManagerMeasure = (x: number, y: number, w: number, h: number): void => {
       const frame: Frame = bindToWindow(new Frame(x, y, w, h), Frame.window());
       props.onMeasure(frame);
     };
-  
-    const node: number = findNodeHandle(ref.current);
-    UIManager.measureInWindow(node, onUIManagerMeasure);
+
+    if (event === null) {
+      const node: number = findNodeHandle(ref.current);
+      UIManager.measureInWindow(node, onUIManagerMeasure);
+      return;
+    }
+
+    const { 
+      height,
+      left,
+      top,
+      width
+    } = event.nativeEvent.layout
+
+    onUIManagerMeasure(left, top, width, height)
   }, [props.onMeasure]);
 
   if (props.force) {
-    measureSelf();
+    measureSelf(null);
   }
 
   return React.cloneElement(props.children, { ref, onLayout: measureSelf });
